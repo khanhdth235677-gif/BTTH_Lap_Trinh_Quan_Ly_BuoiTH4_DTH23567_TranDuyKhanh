@@ -55,8 +55,6 @@
             btnThoat = new Button();
             groupBox2 = new GroupBox();
             dataGridView = new DataGridView();
-            XoayHinhAnh = new GroupBox();
-            button1 = new Button();
             ID = new DataGridViewTextBoxColumn();
             TenLoai = new DataGridViewTextBoxColumn();
             TenHangSanXuat = new DataGridViewTextBoxColumn();
@@ -64,6 +62,8 @@
             SoLuong = new DataGridViewTextBoxColumn();
             DonGia = new DataGridViewTextBoxColumn();
             HinhAnh = new DataGridViewImageColumn();
+            XoayHinhAnh = new GroupBox();
+            button1 = new Button();
             ((System.ComponentModel.ISupportInitialize)picHinhAnh).BeginInit();
             ((System.ComponentModel.ISupportInitialize)numDonGia).BeginInit();
             ((System.ComponentModel.ISupportInitialize)numSoLuong).BeginInit();
@@ -223,6 +223,7 @@
             btnXuat.TabIndex = 6;
             btnXuat.Text = "Xuất ...";
             btnXuat.UseVisualStyleBackColor = true;
+            btnXuat.Click += btnXuat_Click;
             // 
             // btnNhap
             // 
@@ -232,6 +233,7 @@
             btnNhap.TabIndex = 7;
             btnNhap.Text = "Nhập ...";
             btnNhap.UseVisualStyleBackColor = true;
+            btnNhap.Click += btnNhap_Click;
             // 
             // btnHuyBo
             // 
@@ -314,49 +316,6 @@
             dataGridView.Size = new Size(1059, 255);
             dataGridView.TabIndex = 0;
             // 
-            // XoayHinhAnh
-            // 
-            XoayHinhAnh.Controls.Add(button1);
-            XoayHinhAnh.Controls.Add(btnDoiAnh);
-            XoayHinhAnh.Controls.Add(picHinhAnh);
-            XoayHinhAnh.Controls.Add(numDonGia);
-            XoayHinhAnh.Controls.Add(numSoLuong);
-            XoayHinhAnh.Controls.Add(cboLoaiSanPham);
-            XoayHinhAnh.Controls.Add(cboHangSanXuat);
-            XoayHinhAnh.Controls.Add(label6);
-            XoayHinhAnh.Controls.Add(txtMoTa);
-            XoayHinhAnh.Controls.Add(label5);
-            XoayHinhAnh.Controls.Add(label4);
-            XoayHinhAnh.Controls.Add(btnXoa);
-            XoayHinhAnh.Controls.Add(btnSua);
-            XoayHinhAnh.Controls.Add(btnThem);
-            XoayHinhAnh.Controls.Add(txtTenSanPham);
-            XoayHinhAnh.Controls.Add(label3);
-            XoayHinhAnh.Controls.Add(label2);
-            XoayHinhAnh.Controls.Add(btnXuat);
-            XoayHinhAnh.Controls.Add(btnNhap);
-            XoayHinhAnh.Controls.Add(btnHuyBo);
-            XoayHinhAnh.Controls.Add(label1);
-            XoayHinhAnh.Controls.Add(btnTimKiem);
-            XoayHinhAnh.Controls.Add(btnLuu);
-            XoayHinhAnh.Controls.Add(btnThoat);
-            XoayHinhAnh.Location = new Point(13, 8);
-            XoayHinhAnh.Name = "XoayHinhAnh";
-            XoayHinhAnh.Size = new Size(1092, 238);
-            XoayHinhAnh.TabIndex = 16;
-            XoayHinhAnh.TabStop = false;
-            XoayHinhAnh.Text = "Thông tin sản phẩm  ";
-            // 
-            // button1
-            // 
-            button1.Location = new Point(966, 67);
-            button1.Name = "button1";
-            button1.Size = new Size(120, 29);
-            button1.TabIndex = 27;
-            button1.Text = "Xoay hình ảnh";
-            button1.UseVisualStyleBackColor = true;
-            button1.Click += button1_Click;
-            // 
             // ID
             // 
             ID.DataPropertyName = "ID";
@@ -426,6 +385,49 @@
             HinhAnh.Name = "HinhAnh";
             HinhAnh.ReadOnly = true;
             HinhAnh.Resizable = DataGridViewTriState.False;
+            // 
+            // XoayHinhAnh
+            // 
+            XoayHinhAnh.Controls.Add(button1);
+            XoayHinhAnh.Controls.Add(btnDoiAnh);
+            XoayHinhAnh.Controls.Add(picHinhAnh);
+            XoayHinhAnh.Controls.Add(numDonGia);
+            XoayHinhAnh.Controls.Add(numSoLuong);
+            XoayHinhAnh.Controls.Add(cboLoaiSanPham);
+            XoayHinhAnh.Controls.Add(cboHangSanXuat);
+            XoayHinhAnh.Controls.Add(label6);
+            XoayHinhAnh.Controls.Add(txtMoTa);
+            XoayHinhAnh.Controls.Add(label5);
+            XoayHinhAnh.Controls.Add(label4);
+            XoayHinhAnh.Controls.Add(btnXoa);
+            XoayHinhAnh.Controls.Add(btnSua);
+            XoayHinhAnh.Controls.Add(btnThem);
+            XoayHinhAnh.Controls.Add(txtTenSanPham);
+            XoayHinhAnh.Controls.Add(label3);
+            XoayHinhAnh.Controls.Add(label2);
+            XoayHinhAnh.Controls.Add(btnXuat);
+            XoayHinhAnh.Controls.Add(btnNhap);
+            XoayHinhAnh.Controls.Add(btnHuyBo);
+            XoayHinhAnh.Controls.Add(label1);
+            XoayHinhAnh.Controls.Add(btnTimKiem);
+            XoayHinhAnh.Controls.Add(btnLuu);
+            XoayHinhAnh.Controls.Add(btnThoat);
+            XoayHinhAnh.Location = new Point(13, 8);
+            XoayHinhAnh.Name = "XoayHinhAnh";
+            XoayHinhAnh.Size = new Size(1092, 238);
+            XoayHinhAnh.TabIndex = 16;
+            XoayHinhAnh.TabStop = false;
+            XoayHinhAnh.Text = "Thông tin sản phẩm  ";
+            // 
+            // button1
+            // 
+            button1.Location = new Point(966, 67);
+            button1.Name = "button1";
+            button1.Size = new Size(120, 29);
+            button1.TabIndex = 27;
+            button1.Text = "Xoay hình ảnh";
+            button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
             // 
             // FormSanPham
             // 

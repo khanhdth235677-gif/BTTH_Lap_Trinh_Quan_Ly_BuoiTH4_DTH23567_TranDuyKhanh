@@ -37,6 +37,8 @@
             btnHuyBo = new Button();
             btnThoat = new Button();
             groupBox1 = new GroupBox();
+            btnXuat = new Button();
+            btnNhap = new Button();
             groupBox2 = new GroupBox();
             dataGridView = new DataGridView();
             ID = new DataGridViewTextBoxColumn();
@@ -64,9 +66,9 @@
             // 
             // btnThem
             // 
-            btnThem.Location = new Point(168, 59);
+            btnThem.Location = new Point(332, 59);
             btnThem.Name = "btnThem";
-            btnThem.Size = new Size(84, 29);
+            btnThem.Size = new Size(66, 29);
             btnThem.TabIndex = 2;
             btnThem.Text = "Thêm ";
             btnThem.UseVisualStyleBackColor = true;
@@ -75,9 +77,9 @@
             // btnXoa
             // 
             btnXoa.ForeColor = Color.Red;
-            btnXoa.Location = new Point(374, 59);
+            btnXoa.Location = new Point(476, 59);
             btnXoa.Name = "btnXoa";
-            btnXoa.Size = new Size(84, 29);
+            btnXoa.Size = new Size(66, 29);
             btnXoa.TabIndex = 3;
             btnXoa.Text = "Xóa ";
             btnXoa.UseVisualStyleBackColor = true;
@@ -86,9 +88,9 @@
             // btnSua
             // 
             btnSua.ForeColor = Color.Black;
-            btnSua.Location = new Point(270, 59);
+            btnSua.Location = new Point(404, 61);
             btnSua.Name = "btnSua";
-            btnSua.Size = new Size(84, 29);
+            btnSua.Size = new Size(66, 29);
             btnSua.TabIndex = 4;
             btnSua.Text = "Sửa";
             btnSua.UseVisualStyleBackColor = true;
@@ -97,9 +99,9 @@
             // btnLuu
             // 
             btnLuu.ForeColor = Color.Blue;
-            btnLuu.Location = new Point(473, 59);
+            btnLuu.Location = new Point(548, 59);
             btnLuu.Name = "btnLuu";
-            btnLuu.Size = new Size(84, 29);
+            btnLuu.Size = new Size(66, 29);
             btnLuu.TabIndex = 5;
             btnLuu.Text = "Lưu";
             btnLuu.UseVisualStyleBackColor = true;
@@ -107,9 +109,9 @@
             // 
             // btnHuyBo
             // 
-            btnHuyBo.Location = new Point(674, 59);
+            btnHuyBo.Location = new Point(692, 59);
             btnHuyBo.Name = "btnHuyBo";
-            btnHuyBo.Size = new Size(84, 29);
+            btnHuyBo.Size = new Size(66, 29);
             btnHuyBo.TabIndex = 6;
             btnHuyBo.Text = "Hủy bỏ";
             btnHuyBo.UseVisualStyleBackColor = true;
@@ -117,9 +119,9 @@
             // 
             // btnThoat
             // 
-            btnThoat.Location = new Point(573, 59);
+            btnThoat.Location = new Point(620, 59);
             btnThoat.Name = "btnThoat";
-            btnThoat.Size = new Size(84, 29);
+            btnThoat.Size = new Size(66, 29);
             btnThoat.TabIndex = 7;
             btnThoat.Text = "Thoát";
             btnThoat.UseVisualStyleBackColor = true;
@@ -127,6 +129,8 @@
             // 
             // groupBox1
             // 
+            groupBox1.Controls.Add(btnXuat);
+            groupBox1.Controls.Add(btnNhap);
             groupBox1.Controls.Add(btnHuyBo);
             groupBox1.Controls.Add(btnThoat);
             groupBox1.Controls.Add(btnSua);
@@ -141,6 +145,26 @@
             groupBox1.TabIndex = 8;
             groupBox1.TabStop = false;
             groupBox1.Text = "Thông tin loại sản phẩm";
+            // 
+            // btnXuat
+            // 
+            btnXuat.Location = new Point(260, 61);
+            btnXuat.Name = "btnXuat";
+            btnXuat.Size = new Size(66, 29);
+            btnXuat.TabIndex = 9;
+            btnXuat.Text = "Xuất ";
+            btnXuat.UseVisualStyleBackColor = true;
+            btnXuat.Click += btnXuat_Click;
+            // 
+            // btnNhap
+            // 
+            btnNhap.Location = new Point(188, 61);
+            btnNhap.Name = "btnNhap";
+            btnNhap.Size = new Size(66, 29);
+            btnNhap.TabIndex = 8;
+            btnNhap.Text = "Nhập ";
+            btnNhap.UseVisualStyleBackColor = true;
+            btnNhap.Click += btnNhap_Click;
             // 
             // groupBox2
             // 
@@ -212,5 +236,7 @@
         private DataGridView dataGridView;
         private DataGridViewTextBoxColumn ID;
         private DataGridViewTextBoxColumn TenLoai;
+        private Button btnXuat;
+        private Button btnNhap;
     }
 }
